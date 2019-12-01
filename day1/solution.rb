@@ -14,9 +14,7 @@ def part1(masses)
 end
 
 def part2(masses)
-  masses.inject(0) do |sum, mass|
-    sum + fuel_sum(mass.to_i)
-  end
+  masses.inject(0) { |sum, mass| sum + fuel_sum(mass.to_i) }
 end
 
 masses = File.read('input.txt').split
